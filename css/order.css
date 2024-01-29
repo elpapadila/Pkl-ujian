@@ -1,0 +1,335 @@
+* {
+    font-family: 'Joast', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 10%;
+}
+
+header.scroll{
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    z-index: 9999;
+    scroll-behavior: smooth;
+}
+
+.logo a{
+    font-size: 30px;
+    color: crimson;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+}
+
+.nav a {
+    font-size: 18px;
+    padding: 10px 20px;
+    color: #111;
+    transition: all  .40s ease;
+}
+
+.nav a:hover {
+    color: crimson;
+    transform: scale(1.2);
+}
+
+.nav-icon i,
+.menu i{
+    font-size: 25px;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: all  .40s ease;
+}
+
+.nav-icon i:hover {
+    color: crimson;
+}
+
+.menu {
+    display: none;
+}
+
+section {
+    padding: 80px 10%;
+}
+
+.home {
+    width: 100%;
+    min-height: 100wh;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.home-text h4{
+    font-size: 22px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.home-text h1{
+    font-size: 55px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.home-text p{
+    color: crimson;
+    font-style: italic;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.home-img img{
+    width: 400px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn a,
+button{
+    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 15px 30px;
+    color: #111;
+    border: 2px solid crimson;
+    transition: all  .40s ease;
+    border-radius: 10px; 
+}
+
+.btn i{
+    margin-left: 20px;
+}
+
+.btn a:hover,
+button:hover{
+    background-color: crimson;
+    color: #fff;
+}
+
+/* penawaran  */
+
+.head {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.service-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 1rem;
+}
+
+.content{
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.content i{
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.content h3{
+    font-size: 23px;
+    color: crimson;
+    margin-bottom: 10px;
+}
+
+.content p{
+    font-size: 17px;
+}
+
+
+footer{
+    background: #d3d3d3;
+}
+footer p{
+    text-align: center;
+    font-size: 18px;
+    padding: 20px;
+}
+
+/* order */
+#formPemesanan, #detailPemesanan{
+    width: 80%; 
+    max-width: 600px; 
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+#formPemesanan label {
+    display: block;
+    text-align: left;
+    font-weight: bold;
+}
+
+#formPemesanan input[type="text"],
+#formPemesanan select {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#formPemesanan button[type="submit"] {
+    background-color: crimson;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#formPemesanan button[type="submit"]:hover {
+    background-color: #8b0000;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#formTitle {
+    font-size: 30px; 
+    font-weight: bold; 
+    margin-bottom: 20px; 
+    color: #333;
+    text-shadow: 1px 1px 1px #888; 
+}
+
+#formTitle:hover {
+    color: crimson; /* Ubah warna teks saat dihover */
+    transition: color 0.3s ease; /* Efek transisi */
+}
+
+/* Responsive  */
+
+@media (max-width: 1190px){
+    header{
+        padding: 20px 5%;
+    }
+
+    section{
+        padding: 80px 5%;
+    }
+}
+
+@media (max-width: 1074px){
+    .nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 0;
+        display: block;
+        background-color: #000;
+        height: 100vh;
+        padding-top: 50px;
+        opacity: .9;
+        overflow: hidden;
+        transition: all .40s ease;
+
+    }
+
+    .nav.active{
+        width: 40%;
+    }
+
+    .nav a{
+        color: #fff;
+        font-size: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .menu{
+        display: block;
+    }
+}
+
+@media (max-width: 990px){
+    .home{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column-reverse;
+    }
+    .home-img img{
+        max-width: 100%;
+        width: 300px;
+        margin-bottom: 20px;
+    }
+    .home-text{
+        text-align: center;
+    }
+}
+
+@media (max-width: 550px){
+    .product-content{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .p-content{
+        width: 100%;
+    }
+
+    .p-content img{
+        width: 100%;
+    }
+
+    .nav.active{
+        width: 60%;
+    }
+}
+
+@media (max-width: 400px){
+    .logo a{
+        font-size: 25px;
+    }
+    .nav-icon i{
+        font-size: 19px;
+        margin-right: 10px;
+    }
+
+    .home-text h1{
+        font-size: 40px;
+    }
+    .head h3{
+        font-size: 24px;
+    }
+}
